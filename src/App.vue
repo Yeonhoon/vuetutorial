@@ -21,6 +21,7 @@
             <v-list-item :to="{name:'click'}">Event Click</v-list-item>
             <v-list-item :to="{name:'change'}">Event Change</v-list-item>
             <v-list-item :to="{name:'computed'}">Computed</v-list-item>
+            <v-list-item :to="{name:'apibinding'}">API Binding</v-list-item>
           </v-list>
         </v-menu>
         

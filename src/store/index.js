@@ -13,7 +13,8 @@ export default new Vuex.Store({
       {id:3, name: 'jyh', email:'jyh@naver.com',password:'123'}
     ],
     isLogin: false,
-    isLoginError: false
+    isLoginError: false,
+    productList : []
   },
   mutations: {
     // 상태값변경(로그인 성공시)
@@ -31,7 +32,10 @@ export default new Vuex.Store({
       state.isLogin = false
       state.isLoginError = false
       state.userInfo = null
-    }
+    },
+    // getList(state){
+    //   state.productList = 
+    // }
   },
   actions: {
     //business 로직

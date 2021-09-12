@@ -83,6 +83,11 @@ const routes = [
     name: 'computed',
     component: () => import ('../views/tutorial/Computed.vue')
   },
+  {
+    path: '/bindingList',
+    name: 'apibinding',
+    component: () => import ('../views/tutorial/DataBindingList.vue')
+  }
 ]
 
 const router = new VueRouter({
