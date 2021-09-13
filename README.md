@@ -43,3 +43,17 @@ getPostman.com
 - 토큰은 정해진 시간이 지나면 초기화 됨.
 - post방식: 링크 뒤에 파라미터가 올 수 있음.
 - get 방식: 링크 뒤에 config(보안관련)
+
+
+## 부모와 자식 간 데이터 송수신
+- <b>Parent component --> Child component</b>
+  - 문자형을 제외한 모든 데이터(숫자, 논리형, 배열, object, object 속성 등은 v-bind(:~)를 통해 전달). 문자열만 v-bind를 사용할 필요 없음.
+  - 자식 컴포넌트에서는 부모가 보내는 데이터를 받을 때 <b>props</b>로 받음. 
+  - validation으로 부모가 보내는 데이터의 타입을 검증하고 받을 수 있음.
+    -  validation에서 걸리면 console에 warning (required, validator...)
+  -  부모가 자식의 데이터 사용을 위해서는 $refs 사용
+     -  부모 컴포넌트에 불려진 자식 컴포넌트에 ref 이름 지정해줘야 함.
+
+- <b>Child component --> Parent component</b>
+  - 자식의 데이터를 부모가 받으려면 자식에서 this.$emit('name', data) 형식으로 보냄.
+  - 부모는 자식의 component를 불러온 컴포넌트에서 @name="function"으로 불러오고 script에서 미리 입력한 데이터에 자식으로부터 온 데이터를 넣어줌.

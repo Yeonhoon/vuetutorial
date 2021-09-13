@@ -52,6 +52,10 @@ const routes = [
     name:'mypage',
     beforeEnter: onlyAuthUser,
     component: () => import(/* webpackChunkName: "about" */ '../views/MyPage.vue')
+  },{
+    path:'/databinding',
+    name: 'bindings',
+    component: () => import(/* webpackChunkName: "about" */ '../views/tutorial/DataBinding.vue')
   },
   {
     path: '/bindingAttribute',
@@ -87,6 +91,16 @@ const routes = [
     path: '/bindingList',
     name: 'apibinding',
     component: () => import ('../views/tutorial/DataBindingList.vue')
+  },
+  {
+    path: '/nested',
+    name: 'nested',
+    component: () => import('../components/NestedComponents.vue')
+  },
+  {
+    path:'/emit',
+    name: 'emit',
+    component: () => import('../components/ParentComponent.vue')
   }
 ]
 

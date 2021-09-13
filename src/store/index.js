@@ -64,6 +64,17 @@ export default new Vuex.Store({
         .catch( err => {
             console.log(err);
         });
+    },
+    loadTable(){
+      axios
+      .get('https://6834e3d7-089f-4e1f-9153-165c56341f52.mock.pstmn.io/list/example')
+      .then(response => {
+        console.log(response)
+        this.productList = response.data
+      })
+      .catch(error => {
+        console.log(error)
+      })
     }
   }
     //   let selectedUser = null

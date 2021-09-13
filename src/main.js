@@ -7,6 +7,10 @@ import router from './router'
 import mixin from './mixin/mixin.js'
 // Vue.config.productionTip = false
 
+import PageTitle from './components/PageTitle'
+Vue.component('PageTitle',PageTitle)
+
+
 new Vue({
   vuetify,
   store,
