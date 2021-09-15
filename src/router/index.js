@@ -101,6 +101,11 @@ const routes = [
     path:'/emit',
     name: 'emit',
     component: () => import('../components/ParentComponent.vue')
+  },
+  {
+    path:'/dialog',
+    name:'dialog',
+    component: () => import('../views/tutorial/UseDialog.vue')
   }
 ]
 
