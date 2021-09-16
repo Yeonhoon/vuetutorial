@@ -3,6 +3,7 @@
     <v-container>
       <v-btn
         dark color='green'
+        elevation="5"
         @click="showDialog('Text')">
         Show Dialog
       </v-btn>
@@ -27,6 +28,7 @@
       <!-- list -->
       <v-btn
         dark color="red"
+        elevation="5"
         @click="showDialog('List')"
       > 
       과일 리스트
@@ -41,7 +43,7 @@
         >
           <template v-slot:body>
             <v-list >
-              <v-list-item-group color='primary' v-model="selectedItem">
+              <v-list-item-group color='primary' >
                 <v-list-item v-for ="(item,i) in mylist" :key=i >
                   <v-list-item-content >
                     <v-list-item-title 
@@ -69,7 +71,8 @@ export default {
       myDialogList: false,
       mytext: "",
       mylist: [],
-      selectedItem:""
+      selectedItem:"",
+      footerSubmit: true
   }),
 
   created() {
@@ -95,9 +98,9 @@ export default {
       this.mytext=null
     },
     submitDialog(type){
-      if(type==="Text") console.log('submit 완료: ', this.mytext)
-      else if (type ==="List") console.log('submit 완료: ')
-      console.log(this.selectedItem)
+      if(type==="Text") console.log('Text submit 완료: ', this.mytext)
+      else if (type ==="List") console.log('List submit 완료: ', this.selectedItem)
+      // console.log(this.selectedItem)
       this.hideDialog(type)
       this.mytext=null
     }

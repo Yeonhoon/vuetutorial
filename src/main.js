@@ -8,7 +8,9 @@ import mixin from './mixin/mixin.js'
 // Vue.config.productionTip = false
 
 import PageTitle from './components/PageTitle'
+// import ProvideInjectChild from './views/tutorial/ProvideInjectChild'
 Vue.component('PageTitle',PageTitle)
+// Vue.component('ProvideInjectChild',ProvideInjectChild)
 
 
 new Vue({

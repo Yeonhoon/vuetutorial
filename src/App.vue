@@ -15,7 +15,7 @@
             
           </template>
           <v-list>
-            <v-list-item :to="{name:'bindings'}">Data binding</v-list-item>
+            <v-list-item :to="{name:'bindings'}" exact>Data binding</v-list-item>
             <v-list-item :to="{name:'binding'}">Data binding Attribute</v-list-item>
             <v-list-item :to="{name:'classBinding'}">Class binding</v-list-item>
             <v-list-item :to="{name:'vif'}">Rendering V-if</v-list-item>
@@ -25,6 +25,8 @@
             <v-list-item :to="{name:'apibinding'}">API Binding</v-list-item>
             <v-list-item :to="{name:'nested'}">Props</v-list-item>
             <v-list-item :to="{name:'emit'}">Emit</v-list-item>
+            <v-list-item :to="{name:'dialog'}">Dialog using Slot</v-list-item>
+            <v-list-item :to="{name:'provideInject'}">Provide & Inject</v-list-item>
           </v-list>
         </v-menu>
         

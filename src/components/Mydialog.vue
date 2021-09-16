@@ -9,7 +9,8 @@
     <v-card-actions class="justify-end mr-2 pb-4">
       <v-btn
         color="warning"
-        dark rounded small
+        raised
+        dark 
         @click ="$emit('hide')"
       >
         {{footerHideTitle}}
@@ -17,7 +18,6 @@
       <template v-if="footerSubmit">
         <v-btn
           color="success"
-          rounded small
           @click="$emit('submit')"
         >
           {{ footerSubmitTitle }}
@@ -31,10 +31,10 @@
 export default {
   name: "myDialog",
   props: {
-    footerSubmit: {
-      type: Boolean,
-      default: true,
-    },
+    // footerSubmit: {
+    //   type: Boolean,
+    //   default: true,
+    // },
     headerTitle: {
       type: String,
       default: "제목",
@@ -46,7 +46,8 @@ export default {
   },
   data: () => ({
     footerHideTitle: '닫기',
-    defaultBodyContent: 'body slot을 작성하라.'
+    defaultBodyContent: 'body slot을 작성하라.',
+    footerSubmit: true
   })
 }
 </script>

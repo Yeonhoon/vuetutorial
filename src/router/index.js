@@ -106,6 +106,11 @@ const routes = [
     path:'/dialog',
     name:'dialog',
     component: () => import('../views/tutorial/UseDialog.vue')
+  },
+  {
+    path:'/provideinject',
+    name: 'provideInject',
+    component: () => import('../views/tutorial/ProvideInject.vue')
   }
 ]
 
